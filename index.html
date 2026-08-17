@@ -13,6 +13,7 @@
 }
 
 body {
+    
     min-height: 100vh;
     background: #fff7f8;
     color: #60444d;
@@ -364,7 +365,9 @@ audio {
 </head>
 
 <body>
-
+<audio id="backgroundMusic" autoplay loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
 <!-- PAGE 1 : PASSWORD -->
 <section id="page1" class="page">
     <div class="lock-card">
@@ -483,29 +486,18 @@ audio {
         </p>
 
         <div class="photo-box">
+    <img id="memoryPhoto" src="IMG_0707.jpeg" alt="Our memory">
+</div>
 
-            <!--
-            NANTI KAU BOLEH LETAK GAMBAR SENDIRI.
+<div style="margin-top:15px;">
+    <button class="next-btn" onclick="previousPhoto()" style="display:inline-block; margin:5px;">
+        ←
+    </button>
 
-            Namakan gambar kau:
-            gambar1.jpg
-
-            kemudian letak fail itu dalam repository yang sama.
-            -->
-
-            <img
-                src="gambar1.jpg"
-                alt="Our memory"
-                onerror="this.style.display='none'; document.getElementById('photoText').style.display='block';"
-            >
-
-            <div id="photoText" class="placeholder">
-                📸<br><br>
-                Your photo will be here ♡<br>
-                <small>
-                Add your own picture as <b>gambar1.jpg</b>
-                </small>
-            </div>
+    <button class="next-btn" onclick="nextPhoto()" style="display:inline-block; margin:5px;">
+        →
+    </button>
+</div>
 
         </div>
 
@@ -538,10 +530,6 @@ audio {
         lagu.mp3
         -->
 
-        <audio id="music" controls>
-            <source src="lagu.mp3" type="audio/mpeg">
-            Your browser does not support audio.
-        </audio>
 
         <button class="next-btn" onclick="showPage(6)">
             One Last Thing ♡
@@ -670,7 +658,33 @@ function startHearts() {
     }, 700);
 
 }
+const photos = [
+    "IMG_0707.jpeg",
+    "IMG_0717.jpeg",
+    "IMG_0730.jpeg"
+];
 
+let currentPhoto = 0;
+
+function nextPhoto() {
+    currentPhoto++;
+
+    if (currentPhoto >= photos.length) {
+        currentPhoto = 0;
+    }
+
+    document.getElementById("memoryPhoto").src = photos[currentPhoto];
+}
+
+function previousPhoto() {
+    currentPhoto--;
+
+    if (currentPhoto < 0) {
+        currentPhoto = photos.length - 1;
+    }
+
+    document.getElementById("memoryPhoto").src = photos[currentPhoto];
+}
 </script>
 
 </body>
