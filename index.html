@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>For YAYANG ♡</title>
 
 <style>
-
-/* ==============================
-   BASIC
-============================== */
 
 * {
     box-sizing: border-box;
@@ -42,28 +37,9 @@ body {
 }
 
 
-/* ==============================
-   GENERAL ANIMATION
-============================== */
-
-@keyframes appear {
-
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-
-/* ==============================
+/* =========================
    FLOATING HEARTS
-============================== */
+========================= */
 
 .heart {
     position: fixed;
@@ -85,39 +61,51 @@ body {
 }
 
 
-/* ==============================
+/* =========================
+   FADE / APPEAR
+========================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
    PAGE 1 - PASSWORD
-============================== */
+========================= */
 
 .lock-card {
 
     width: min(420px, 100%);
-
     text-align: center;
-
     padding: 42px 28px;
 
     background: rgba(255,255,255,.82);
 
     border: 1px solid #f1d7de;
-
     border-radius: 30px;
 
-    box-shadow:
-        0 25px 70px rgba(132,74,91,.12);
+    box-shadow: 0 25px 70px rgba(132,74,91,.12);
 
     animation: appear 1.2s ease;
-
 }
 
 .big-heart {
 
     font-size: 62px;
-
     color: #d8899e;
 
     animation: heartbeat 1.7s infinite;
-
 }
 
 @keyframes heartbeat {
@@ -131,23 +119,16 @@ body {
 .lock-card h1 {
 
     margin-top: 18px;
-
     font-size: 34px;
-
     font-weight: normal;
-
     letter-spacing: 1px;
-
 }
 
 .lock-card p {
 
     margin-top: 12px;
-
     line-height: 1.8;
-
     color: #92747d;
-
 }
 
 .password {
@@ -155,25 +136,20 @@ body {
     width: 100%;
 
     margin-top: 25px;
-
     padding: 15px;
 
     border: 1px solid #e9c2cd;
-
     border-radius: 15px;
 
     text-align: center;
 
     font-size: 20px;
-
     letter-spacing: 7px;
 
     outline: none;
 
     color: #60444d;
-
     background: #fffafb;
-
 }
 
 .open-btn {
@@ -183,11 +159,9 @@ body {
     padding: 14px 27px;
 
     border: none;
-
     border-radius: 50px;
 
     background: #d8899e;
-
     color: white;
 
     font-size: 15px;
@@ -195,46 +169,38 @@ body {
     cursor: pointer;
 
     transition: .3s;
-
 }
 
 .open-btn:hover {
 
     transform: translateY(-2px);
-
     background: #c8758c;
-
 }
 
 .error {
 
     height: 25px;
-
     margin-top: 10px;
 
     color: #bd526e;
 
     font-size: 13px;
-
 }
 
 
-/* ==============================
+/* =========================
    PAGE 2 - ENVELOPE
-============================== */
+========================= */
 
 .envelope-wrap {
 
     text-align: center;
-
     animation: appear 1s ease;
-
 }
 
 .envelope {
 
     width: 260px;
-
     height: 175px;
 
     background: #f0c4cf;
@@ -245,11 +211,9 @@ body {
 
     border-radius: 8px;
 
-    box-shadow:
-        0 20px 50px rgba(120,60,80,.18);
+    box-shadow: 0 20px 50px rgba(120,60,80,.18);
 
     cursor: pointer;
-
 }
 
 .envelope:before {
@@ -262,9 +226,11 @@ body {
 
     background: #e8aebe;
 
-    clip-path:
-        polygon(0 0, 50% 55%, 100% 0);
-
+    clip-path: polygon(
+        0 0,
+        50% 55%,
+        100% 0
+    );
 }
 
 .envelope:after {
@@ -274,7 +240,6 @@ body {
     position: absolute;
 
     top: 58px;
-
     left: 50%;
 
     transform: translateX(-50%);
@@ -282,7 +247,6 @@ body {
     font-size: 45px;
 
     color: white;
-
 }
 
 .envelope-wrap h2 {
@@ -292,7 +256,6 @@ body {
     font-size: 30px;
 
     font-weight: normal;
-
 }
 
 .envelope-wrap p {
@@ -300,7 +263,6 @@ body {
     margin-top: 10px;
 
     color: #987780;
-
 }
 
 .tap {
@@ -312,7 +274,6 @@ body {
     font-size: 14px;
 
     animation: blink 1.5s infinite;
-
 }
 
 @keyframes blink {
@@ -324,9 +285,9 @@ body {
 }
 
 
-/* ==============================
+/* =========================
    PAGE 3 - LETTER
-============================== */
+========================= */
 
 .letter-page {
 
@@ -340,11 +301,9 @@ body {
 
     border-radius: 28px;
 
-    box-shadow:
-        0 20px 60px rgba(100,50,70,.10);
+    box-shadow: 0 20px 60px rgba(100,50,70,.10);
 
     animation: appear 1s ease;
-
 }
 
 .letter-page h1 {
@@ -355,42 +314,35 @@ body {
 
     font-weight: normal;
 
-    margin-bottom: 35px;
-
+    margin-bottom: 30px;
 }
 
 .typing-area {
-
-    min-height: 450px;
-
-}
-
-.typing-text {
 
     font-size: 18px;
 
     line-height: 2;
 
-    margin-bottom: 20px;
-
+    min-height: 400px;
 }
 
-.typing-cursor {
+.typing-text {
+
+    margin-bottom: 20px;
+}
+
+.cursor {
 
     display: inline-block;
 
     width: 2px;
-
     height: 20px;
 
     background: #d8899e;
 
     margin-left: 3px;
 
-    vertical-align: middle;
-
     animation: cursorBlink .8s infinite;
-
 }
 
 @keyframes cursorBlink {
@@ -412,13 +364,11 @@ body {
     opacity: 0;
 
     transition: opacity 1s ease;
-
 }
 
 .signature.show {
 
     opacity: 1;
-
 }
 
 .next-btn {
@@ -438,22 +388,18 @@ body {
     color: white;
 
     cursor: pointer;
-
 }
 
 
-/* ==============================
+/* =========================
    PAGE 4 - MEMORIES
-============================== */
+========================= */
 
 .memory-page {
 
     width: min(650px, 100%);
 
     text-align: center;
-
-    animation: appear 1s ease;
-
 }
 
 .memory-page h1 {
@@ -461,7 +407,6 @@ body {
     font-size: 34px;
 
     font-weight: normal;
-
 }
 
 .subtitle {
@@ -469,7 +414,6 @@ body {
     margin-top: 10px;
 
     color: #967780;
-
 }
 
 .photo-box {
@@ -487,118 +431,33 @@ body {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     overflow: hidden;
 
-    box-shadow:
-        0 18px 50px rgba(120,60,80,.12);
-
+    box-shadow: 0 18px 50px rgba(120,60,80,.12);
 }
 
 .photo-box img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
-
-}
-
-.photo-buttons {
-
-    margin-top: 15px;
-
-}
-
-.photo-buttons button {
-
-    display: inline-block;
-
-    margin: 5px;
-
 }
 
 
-/* ==============================
-   PAGE 5 - SONG
-============================== */
+/* =========================
+   MUSIC HIDDEN
+========================= */
 
-.music-card {
-
-    width: min(430px, 100%);
-
-    background: white;
-
-    border-radius: 28px;
-
-    padding: 35px 25px;
-
-    text-align: center;
-
-    box-shadow:
-        0 20px 60px rgba(100,50,70,.12);
-
-    animation: appear 1s ease;
-
-}
-
-.music-disc {
-
-    width: 160px;
-
-    height: 160px;
-
-    margin: auto;
-
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #efb9c8,
-            #d8869d
-        );
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: white;
-
-    font-size: 55px;
-
-    box-shadow:
-        0 15px 40px rgba(190,100,125,.25);
-
-}
-
-.music-card h2 {
-
-    margin-top: 25px;
-
-    font-size: 25px;
-
-    font-weight: normal;
-
-}
-
-.music-card p {
-
-    margin-top: 8px;
-
-    color: #967780;
-
-}
+/* Lagu dimainkan di background.
+   Tiada music player dipaparkan. */
 
 
-/* ==============================
+/* =========================
    PAGE 6 - ENDING
-============================== */
+========================= */
 
 .final {
 
@@ -607,7 +466,6 @@ body {
     max-width: 600px;
 
     animation: appear 1.5s ease;
-
 }
 
 .final .huge {
@@ -615,7 +473,6 @@ body {
     font-size: 70px;
 
     color: #d8899e;
-
 }
 
 .final h1 {
@@ -625,7 +482,6 @@ body {
     font-weight: normal;
 
     margin-top: 20px;
-
 }
 
 .final p {
@@ -635,7 +491,6 @@ body {
     line-height: 2;
 
     margin-top: 25px;
-
 }
 
 .final .ika {
@@ -643,13 +498,12 @@ body {
     margin-top: 40px;
 
     font-size: 25px;
-
 }
 
 
-/* ==============================
+/* =========================
    MOBILE
-============================== */
+========================= */
 
 @media(max-width:500px) {
 
@@ -658,71 +512,43 @@ body {
     .memory-page h1 {
 
         font-size: 29px;
-
     }
 
-    .typing-text {
+    .typing-area {
 
         font-size: 16px;
-
-        line-height: 1.9;
-
     }
 
     .photo-box {
 
         height: 300px;
-
-    }
-
-    .final h1 {
-
-        font-size: 30px;
-
-    }
-
-    .final p {
-
-        font-size: 17px;
-
     }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- ==================================================
+<!-- =====================================
      BACKGROUND MUSIC
-================================================== -->
+===================================== -->
 
-<audio
-    id="backgroundMusic"
-    loop
-    preload="auto"
->
+<audio id="backgroundMusic" loop preload="auto">
 
-    <source
-        src="Menari-nari.mp3"
-        type="audio/mpeg"
-    >
+    <source src="Menari-nari.mp3" type="audio/mpeg">
 
 </audio>
 
 
-<!-- ==================================================
+<!-- =====================================
      PAGE 1 - PASSWORD
-================================================== -->
+===================================== -->
 
-<section
-    id="page1"
-    class="page"
->
+<section id="page1" class="page">
 
     <div class="lock-card">
 
@@ -730,14 +556,17 @@ body {
             ♡
         </div>
 
+
         <h1>
             For YAYANG
         </h1>
+
 
         <p>
             A little something<br>
             made especially for you.
         </p>
+
 
         <input
             id="password"
@@ -748,6 +577,7 @@ body {
             inputmode="numeric"
         >
 
+
         <button
             class="open-btn"
             onclick="checkPassword()"
@@ -755,14 +585,14 @@ body {
             Open My Letter ♡
         </button>
 
+
         <div
             id="error"
             class="error"
         ></div>
 
-        <p
-            style="font-size:12px; opacity:.55;"
-        >
+
+        <p style="font-size:12px; opacity:.55;">
             made with love by IKA
         </p>
 
@@ -771,9 +601,10 @@ body {
 </section>
 
 
-<!-- ==================================================
+
+<!-- =====================================
      PAGE 2 - ENVELOPE
-================================================== -->
+===================================== -->
 
 <section
     id="page2"
@@ -782,31 +613,37 @@ body {
 
     <div class="envelope-wrap">
 
+
         <div
             class="envelope"
             onclick="showPage(3)"
         ></div>
 
+
         <h2>
             For YAYANG ♡
         </h2>
+
 
         <p>
             Someone left a little something here for you...
         </p>
 
+
         <div class="tap">
             tap the envelope to open
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
+
+<!-- =====================================
      PAGE 3 - LETTER
-================================================== -->
+===================================== -->
 
 <section
     id="page3"
@@ -815,14 +652,17 @@ body {
 
     <div class="letter-page">
 
+
         <h1>
             Dear YAYANG ♡
         </h1>
+
 
         <div
             id="typingArea"
             class="typing-area"
         ></div>
+
 
         <div
             id="signature"
@@ -832,23 +672,26 @@ body {
             <b>IKA ♡</b>
         </div>
 
+
         <button
             id="letterNext"
             class="next-btn"
             onclick="showPage(4)"
-            style="display:none;"
+            style="opacity:0; pointer-events:none;"
         >
             Our Memories →
         </button>
+
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
+
+<!-- =====================================
      PAGE 4 - MEMORIES
-================================================== -->
+===================================== -->
 
 <section
     id="page4"
@@ -857,13 +700,16 @@ body {
 
     <div class="memory-page">
 
+
         <h1>
             Our Little Memories ♡
         </h1>
 
+
         <p class="subtitle">
             Some moments are worth keeping forever.
         </p>
+
 
         <div class="photo-box">
 
@@ -875,58 +721,28 @@ body {
 
         </div>
 
-        <div class="photo-buttons">
+
+        <div style="margin-top:15px;">
 
             <button
                 class="next-btn"
                 onclick="previousPhoto()"
+                style="display:inline-block; margin:5px;"
             >
                 ←
             </button>
 
+
             <button
                 class="next-btn"
                 onclick="nextPhoto()"
+                style="display:inline-block; margin:5px;"
             >
                 →
             </button>
 
         </div>
 
-        <button
-            class="next-btn"
-            onclick="showPage(5)"
-        >
-            Our Song ♫
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     PAGE 5 - SONG
-================================================== -->
-
-<section
-    id="page5"
-    class="page hidden"
->
-
-    <div class="music-card">
-
-        <div class="music-disc">
-            ♫
-        </div>
-
-        <h2>
-            Menari-nari
-        </h2>
-
-        <p>
-            Raim Laode
-        </p>
 
         <button
             class="next-btn"
@@ -935,14 +751,16 @@ body {
             One Last Thing ♡
         </button>
 
+
     </div>
 
 </section>
 
 
-<!-- ==================================================
+
+<!-- =====================================
      PAGE 6 - ENDING
-================================================== -->
+===================================== -->
 
 <section
     id="page6"
@@ -951,56 +769,67 @@ body {
 
     <div class="final">
 
+
         <div class="huge">
             ♡
         </div>
 
+
         <h1>
             And one last thing...
         </h1>
+
 
         <p>
             If you ever wonder how special you are to me,
             I hope you remember this little letter.
         </p>
 
+
         <p>
             Maybe this is just a small website,
             but every word here was made with a sincere heart.
         </p>
 
+
         <p>
             Thank you for being you.
         </p>
 
+
         <div class="ika">
+
             With love,<br>
-            <b>IKA ♡</b>
+
+            <b>
+                IKA ♡
+            </b>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ==================================================
-     JAVASCRIPT
-================================================== -->
 
 <script>
 
 
-/* ==============================
+/* =====================================
    PASSWORD
-============================== */
+===================================== */
 
 const PASSWORD = "0602";
 
 
 function checkPassword() {
 
+
     const input =
         document.getElementById("password").value;
+
 
     const error =
         document.getElementById("error");
@@ -1008,45 +837,56 @@ function checkPassword() {
 
     if (input === PASSWORD) {
 
+
         error.innerHTML = "";
 
 
-        /* START MUSIC */
+        /*
+        PENTING:
+
+        Lagu dimainkan di sini sebab
+        pengguna baru sahaja tekan button.
+
+        Browser biasanya membenarkan
+        audio selepas user interaction.
+        */
 
         const music =
-            document.getElementById(
-                "backgroundMusic"
-            );
+            document.getElementById("backgroundMusic");
 
 
-        if (music) {
-
-            music.play().catch(
-                function(error) {
-
-                    console.log(
-                        "Audio blocked:",
-                        error
-                    );
-
-                }
-            );
-
-        }
+        music.volume = 1;
 
 
-        /* GO TO PAGE 2 */
+        music.currentTime = 0;
+
+
+        music.play()
+            .then(function() {
+
+                console.log(
+                    "Music started successfully."
+                );
+
+            })
+            .catch(function(err) {
+
+                console.log(
+                    "Music could not start:",
+                    err
+                );
+
+            });
+
 
         showPage(2);
 
 
-        /* START HEARTS */
-
         startHearts();
 
-    }
 
-    else {
+    } else {
+
 
         error.innerHTML =
             "Hmm... password salah 🥺";
@@ -1056,11 +896,13 @@ function checkPassword() {
 }
 
 
-/* ==============================
-   SHOW PAGE
-============================== */
+
+/* =====================================
+   PAGE NAVIGATION
+===================================== */
 
 function showPage(number) {
+
 
     for (
         let i = 1;
@@ -1068,33 +910,28 @@ function showPage(number) {
         i++
     ) {
 
+
         document
-            .getElementById(
-                "page" + i
-            )
-            .classList.add(
-                "hidden"
-            );
+            .getElementById("page" + i)
+            .classList
+            .add("hidden");
 
     }
 
 
     document
-        .getElementById(
-            "page" + number
-        )
-        .classList.remove(
-            "hidden"
-        );
+        .getElementById("page" + number)
+        .classList
+        .remove("hidden");
 
 
-    window.scrollTo(
-        0,
-        0
-    );
+    window.scrollTo(0,0);
 
 
-    /* START TYPING ON PAGE 3 */
+    /*
+    Bila masuk Page 3,
+    mula typing effect.
+    */
 
     if (number === 3) {
 
@@ -1105,15 +942,17 @@ function showPage(number) {
 }
 
 
-/* ==============================
-   ENTER KEY
-============================== */
+
+/* =====================================
+   ENTER KEY FOR PASSWORD
+===================================== */
 
 document
     .getElementById("password")
     .addEventListener(
         "keydown",
         function(e) {
+
 
             if (e.key === "Enter") {
 
@@ -1125,14 +964,16 @@ document
     );
 
 
-/* ==============================
+
+/* =====================================
    FLOATING HEARTS
-============================== */
+===================================== */
 
 let heartsStarted = false;
 
 
 function startHearts() {
+
 
     if (heartsStarted) {
 
@@ -1144,85 +985,74 @@ function startHearts() {
     heartsStarted = true;
 
 
-    setInterval(
-        function() {
-
-            const heart =
-                document.createElement(
-                    "div"
-                );
+    setInterval(function() {
 
 
-            heart.className =
-                "heart";
+        const heart =
+            document.createElement("div");
 
 
-            const symbols = [
-                "♡",
-                "♥",
-                "❤",
-                "✦"
+        heart.className =
+            "heart";
+
+
+        const symbols =
+            ["♡","♥","❤","✦"];
+
+
+        heart.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
             ];
 
 
-            heart.innerHTML =
-                symbols[
-                    Math.floor(
-                        Math.random() *
-                        symbols.length
-                    )
-                ];
+        heart.style.left =
+            Math.random() * 100 + "vw";
 
 
-            heart.style.left =
-                Math.random() *
-                100 +
-                "vw";
+        heart.style.fontSize =
+            (
+                14 +
+                Math.random() * 18
+            ) + "px";
 
 
-            heart.style.fontSize =
-                (
-                    14 +
-                    Math.random() * 18
-                ) +
-                "px";
+        heart.style.animationDuration =
+            (
+                5 +
+                Math.random() * 5
+            ) + "s";
 
 
-            heart.style.animationDuration =
-                (
-                    5 +
-                    Math.random() * 5
-                ) +
-                "s";
+        document.body.appendChild(
+            heart
+        );
 
 
-            document.body.appendChild(
-                heart
-            );
+        setTimeout(
+            function() {
+
+                heart.remove();
+
+            },
+            10000
+        );
 
 
-            setTimeout(
-                function() {
-
-                    heart.remove();
-
-                },
-                10000
-            );
-
-
-        },
-        700
-    );
+    }, 700);
 
 }
 
 
-/* ==============================
-   TYPING LETTER
-============================== */
 
-const letterTexts = [
+/* =====================================
+   TYPING EFFECT
+===================================== */
+
+const letterMessages = [
 
     "Hi yayang,",
 
@@ -1243,6 +1073,7 @@ let typingStarted = false;
 
 
 async function startTyping() {
+
 
     if (typingStarted) {
 
@@ -1277,14 +1108,13 @@ async function startTyping() {
 
     for (
         let i = 0;
-        i < letterTexts.length;
+        i < letterMessages.length;
         i++
     ) {
 
+
         const paragraph =
-            document.createElement(
-                "p"
-            );
+            document.createElement("div");
 
 
         paragraph.className =
@@ -1298,7 +1128,7 @@ async function startTyping() {
 
         await typeText(
             paragraph,
-            letterTexts[i]
+            letterMessages[i]
         );
 
 
@@ -1312,26 +1142,31 @@ async function startTyping() {
     );
 
 
-    await wait(1000);
+    await wait(700);
 
 
-    nextButton.style.display =
-        "block";
+    nextButton.style.opacity = "1";
+
+    nextButton.style.pointerEvents =
+        "auto";
 
 }
 
 
-/* ==============================
+
+/* =====================================
    TYPE EACH LETTER
-============================== */
+===================================== */
 
 function typeText(
     element,
     text
 ) {
 
+
     return new Promise(
         function(resolve) {
+
 
             let index = 0;
 
@@ -1343,7 +1178,7 @@ function typeText(
 
 
             cursor.className =
-                "typing-cursor";
+                "cursor";
 
 
             element.appendChild(
@@ -1351,30 +1186,32 @@ function typeText(
             );
 
 
-            const interval =
+            const typing =
                 setInterval(
                     function() {
+
 
                         if (
                             index <
                             text.length
                         ) {
 
+
                             cursor.before(
                                 document.createTextNode(
-                                    text[index]
+                                    text.charAt(index)
                                 )
                             );
 
 
                             index++;
 
-                        }
 
-                        else {
+                        } else {
+
 
                             clearInterval(
-                                interval
+                                typing
                             );
 
 
@@ -1384,6 +1221,7 @@ function typeText(
                             resolve();
 
                         }
+
 
                     },
                     35
@@ -1395,9 +1233,10 @@ function typeText(
 }
 
 
-/* ==============================
-   WAIT
-============================== */
+
+/* =====================================
+   WAIT FUNCTION
+===================================== */
 
 function wait(ms) {
 
@@ -1415,9 +1254,10 @@ function wait(ms) {
 }
 
 
-/* ==============================
+
+/* =====================================
    PHOTOS
-============================== */
+===================================== */
 
 const photos = [
 
@@ -1433,7 +1273,9 @@ const photos = [
 let currentPhoto = 0;
 
 
+
 function nextPhoto() {
+
 
     currentPhoto++;
 
@@ -1453,14 +1295,14 @@ function nextPhoto() {
             "memoryPhoto"
         )
         .src =
-        photos[
-            currentPhoto
-        ];
+        photos[currentPhoto];
 
 }
 
 
+
 function previousPhoto() {
+
 
     currentPhoto--;
 
@@ -1480,9 +1322,7 @@ function previousPhoto() {
             "memoryPhoto"
         )
         .src =
-        photos[
-            currentPhoto
-        ];
+        photos[currentPhoto];
 
 }
 
