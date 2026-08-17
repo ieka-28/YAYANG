@@ -584,16 +584,25 @@ function checkPassword() {
 
     if (input === PASSWORD) {
 
-    error.innerHTML = "";
+        error.innerHTML = "";
 
-    const music = document.getElementById("backgroundMusic");
+        showPage(2);
 
-    music.play();
+        startHearts();
 
-    showPage(2);
+        const music = document.getElementById("backgroundMusic");
 
-    startHearts();
+        if (music) {
+            music.play().catch(function(error) {
+                console.log("Autoplay blocked:", error);
+            });
+        }
 
+    } else {
+
+        error.innerHTML = "Hmm... password salah 🥺";
+
+    }
 }
 
     } else {
