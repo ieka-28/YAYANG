@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -62,7 +64,7 @@ body {
 
 
 /* =========================
-   FADE / APPEAR
+   APPEAR
 ========================= */
 
 @keyframes appear {
@@ -81,18 +83,21 @@ body {
 
 
 /* =========================
-   PAGE 1 - PASSWORD
+   PAGE 1
 ========================= */
 
 .lock-card {
 
     width: min(420px, 100%);
+
     text-align: center;
+
     padding: 42px 28px;
 
     background: rgba(255,255,255,.82);
 
     border: 1px solid #f1d7de;
+
     border-radius: 30px;
 
     box-shadow: 0 25px 70px rgba(132,74,91,.12);
@@ -103,6 +108,7 @@ body {
 .big-heart {
 
     font-size: 62px;
+
     color: #d8899e;
 
     animation: heartbeat 1.7s infinite;
@@ -119,15 +125,20 @@ body {
 .lock-card h1 {
 
     margin-top: 18px;
+
     font-size: 34px;
+
     font-weight: normal;
+
     letter-spacing: 1px;
 }
 
 .lock-card p {
 
     margin-top: 12px;
+
     line-height: 1.8;
+
     color: #92747d;
 }
 
@@ -136,19 +147,23 @@ body {
     width: 100%;
 
     margin-top: 25px;
+
     padding: 15px;
 
     border: 1px solid #e9c2cd;
+
     border-radius: 15px;
 
     text-align: center;
 
     font-size: 20px;
+
     letter-spacing: 7px;
 
     outline: none;
 
     color: #60444d;
+
     background: #fffafb;
 }
 
@@ -159,9 +174,11 @@ body {
     padding: 14px 27px;
 
     border: none;
+
     border-radius: 50px;
 
     background: #d8899e;
+
     color: white;
 
     font-size: 15px;
@@ -174,12 +191,14 @@ body {
 .open-btn:hover {
 
     transform: translateY(-2px);
+
     background: #c8758c;
 }
 
 .error {
 
     height: 25px;
+
     margin-top: 10px;
 
     color: #bd526e;
@@ -189,18 +208,20 @@ body {
 
 
 /* =========================
-   PAGE 2 - ENVELOPE
+   PAGE 2
 ========================= */
 
 .envelope-wrap {
 
     text-align: center;
+
     animation: appear 1s ease;
 }
 
 .envelope {
 
     width: 260px;
+
     height: 175px;
 
     background: #f0c4cf;
@@ -240,6 +261,7 @@ body {
     position: absolute;
 
     top: 58px;
+
     left: 50%;
 
     transform: translateX(-50%);
@@ -286,7 +308,7 @@ body {
 
 
 /* =========================
-   PAGE 3 - LETTER
+   PAGE 3
 ========================= */
 
 .letter-page {
@@ -336,6 +358,7 @@ body {
     display: inline-block;
 
     width: 2px;
+
     height: 20px;
 
     background: #d8899e;
@@ -392,7 +415,7 @@ body {
 
 
 /* =========================
-   PAGE 4 - MEMORIES
+   PAGE 4
 ========================= */
 
 .memory-page {
@@ -431,6 +454,7 @@ body {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     overflow: hidden;
@@ -441,6 +465,7 @@ body {
 .photo-box img {
 
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -448,15 +473,7 @@ body {
 
 
 /* =========================
-   MUSIC HIDDEN
-========================= */
-
-/* Lagu dimainkan di background.
-   Tiada music player dipaparkan. */
-
-
-/* =========================
-   PAGE 6 - ENDING
+   PAGE 5 / ENDING
 ========================= */
 
 .final {
@@ -527,30 +544,43 @@ body {
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =====================================
-     BACKGROUND MUSIC
-===================================== -->
+<!-- =========================
+     MUSIC
+========================= -->
 
-<audio id="backgroundMusic" loop preload="auto">
+<audio
+    id="backgroundMusic"
+    loop
+    preload="auto"
+>
 
-    <source src="Menari-nari.mp3" type="audio/mpeg">
+    <source
+        src="Menari-nari.mp3"
+        type="audio/mpeg"
+    >
 
 </audio>
 
 
-<!-- =====================================
-     PAGE 1 - PASSWORD
-===================================== -->
 
-<section id="page1" class="page">
+<!-- =========================
+     PAGE 1
+========================= -->
+
+<section
+    id="page1"
+    class="page"
+>
 
     <div class="lock-card">
+
 
         <div class="big-heart">
             ♡
@@ -596,15 +626,16 @@ body {
             made with love by IKA
         </p>
 
+
     </div>
 
 </section>
 
 
 
-<!-- =====================================
-     PAGE 2 - ENVELOPE
-===================================== -->
+<!-- =========================
+     PAGE 2
+========================= -->
 
 <section
     id="page2"
@@ -641,9 +672,9 @@ body {
 
 
 
-<!-- =====================================
-     PAGE 3 - LETTER
-===================================== -->
+<!-- =========================
+     PAGE 3
+========================= -->
 
 <section
     id="page3"
@@ -668,8 +699,13 @@ body {
             id="signature"
             class="signature"
         >
+
             With love,<br>
-            <b>IKA ♡</b>
+
+            <b>
+                IKA ♡
+            </b>
+
         </div>
 
 
@@ -689,9 +725,9 @@ body {
 
 
 
-<!-- =====================================
-     PAGE 4 - MEMORIES
-===================================== -->
+<!-- =========================
+     PAGE 4
+========================= -->
 
 <section
     id="page4"
@@ -713,16 +749,19 @@ body {
 
         <div class="photo-box">
 
+
             <img
                 id="memoryPhoto"
                 src="IMG_0707.jpeg"
                 alt="Our memory"
             >
 
+
         </div>
 
 
         <div style="margin-top:15px;">
+
 
             <button
                 class="next-btn"
@@ -741,12 +780,13 @@ body {
                 →
             </button>
 
+
         </div>
 
 
         <button
             class="next-btn"
-            onclick="showPage(6)"
+            onclick="showPage(5)"
         >
             One Last Thing ♡
         </button>
@@ -758,12 +798,12 @@ body {
 
 
 
-<!-- =====================================
-     PAGE 6 - ENDING
-===================================== -->
+<!-- =========================
+     PAGE 5
+========================= -->
 
 <section
-    id="page6"
+    id="page5"
     class="page hidden"
 >
 
@@ -817,9 +857,9 @@ body {
 <script>
 
 
-/* =====================================
+/* =========================
    PASSWORD
-===================================== */
+========================= */
 
 const PASSWORD = "0602";
 
@@ -842,17 +882,18 @@ function checkPassword() {
 
 
         /*
-        PENTING:
+        START MUSIC
 
-        Lagu dimainkan di sini sebab
-        pengguna baru sahaja tekan button.
-
-        Browser biasanya membenarkan
-        audio selepas user interaction.
+        Lagu akan cuba dimainkan
+        SELEPAS user tekan button.
+        Ini lebih mudah dibenarkan
+        oleh browser phone.
         */
 
         const music =
-            document.getElementById("backgroundMusic");
+            document.getElementById(
+                "backgroundMusic"
+            );
 
 
         music.volume = 1;
@@ -861,22 +902,24 @@ function checkPassword() {
         music.currentTime = 0;
 
 
-        music.play()
-            .then(function() {
+        const playPromise =
+            music.play();
 
-                console.log(
-                    "Music started successfully."
-                );
 
-            })
-            .catch(function(err) {
+        if (playPromise !== undefined) {
 
-                console.log(
-                    "Music could not start:",
-                    err
-                );
+            playPromise.catch(
+                function(err) {
 
-            });
+                    console.log(
+                        "Music autoplay blocked:",
+                        err
+                    );
+
+                }
+            );
+
+        }
 
 
         showPage(2);
@@ -885,7 +928,9 @@ function checkPassword() {
         startHearts();
 
 
-    } else {
+    }
+
+    else {
 
 
         error.innerHTML =
@@ -897,22 +942,24 @@ function checkPassword() {
 
 
 
-/* =====================================
+/* =========================
    PAGE NAVIGATION
-===================================== */
+========================= */
 
 function showPage(number) {
 
 
     for (
         let i = 1;
-        i <= 6;
+        i <= 5;
         i++
     ) {
 
 
         document
-            .getElementById("page" + i)
+            .getElementById(
+                "page" + i
+            )
             .classList
             .add("hidden");
 
@@ -920,18 +967,15 @@ function showPage(number) {
 
 
     document
-        .getElementById("page" + number)
+        .getElementById(
+            "page" + number
+        )
         .classList
         .remove("hidden");
 
 
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 
-
-    /*
-    Bila masuk Page 3,
-    mula typing effect.
-    */
 
     if (number === 3) {
 
@@ -943,9 +987,9 @@ function showPage(number) {
 
 
 
-/* =====================================
-   ENTER KEY FOR PASSWORD
-===================================== */
+/* =========================
+   ENTER PASSWORD
+========================= */
 
 document
     .getElementById("password")
@@ -960,14 +1004,15 @@ document
 
             }
 
+
         }
     );
 
 
 
-/* =====================================
-   FLOATING HEARTS
-===================================== */
+/* =========================
+   HEARTS
+========================= */
 
 let heartsStarted = false;
 
@@ -985,72 +1030,77 @@ function startHearts() {
     heartsStarted = true;
 
 
-    setInterval(function() {
+    setInterval(
+        function() {
 
 
-        const heart =
-            document.createElement("div");
+            const heart =
+                document.createElement(
+                    "div"
+                );
 
 
-        heart.className =
-            "heart";
+            heart.className =
+                "heart";
 
 
-        const symbols =
-            ["♡","♥","❤","✦"];
+            const symbols =
+                ["♡", "♥", "❤", "✦"];
 
 
-        heart.innerHTML =
-            symbols[
-                Math.floor(
-                    Math.random() *
-                    symbols.length
-                )
-            ];
+            heart.innerHTML =
+                symbols[
+                    Math.floor(
+                        Math.random() *
+                        symbols.length
+                    )
+                ];
 
 
-        heart.style.left =
-            Math.random() * 100 + "vw";
+            heart.style.left =
+                Math.random() * 100 + "vw";
 
 
-        heart.style.fontSize =
-            (
-                14 +
-                Math.random() * 18
-            ) + "px";
+            heart.style.fontSize =
+                (
+                    14 +
+                    Math.random() * 18
+                ) + "px";
 
 
-        heart.style.animationDuration =
-            (
-                5 +
-                Math.random() * 5
-            ) + "s";
+            heart.style.animationDuration =
+                (
+                    5 +
+                    Math.random() * 5
+                ) + "s";
 
 
-        document.body.appendChild(
-            heart
-        );
+            document.body.appendChild(
+                heart
+            );
 
 
-        setTimeout(
-            function() {
+            setTimeout(
+                function() {
 
-                heart.remove();
+                    heart.remove();
 
-            },
-            10000
-        );
+                },
+                10000
+            );
 
 
-    }, 700);
+        },
+        700
+    );
 
 }
 
 
 
-/* =====================================
+/* =========================
    TYPING EFFECT
-===================================== */
+========================= */
 
 const letterMessages = [
 
@@ -1114,7 +1164,9 @@ async function startTyping() {
 
 
         const paragraph =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
 
         paragraph.className =
@@ -1147,6 +1199,7 @@ async function startTyping() {
 
     nextButton.style.opacity = "1";
 
+
     nextButton.style.pointerEvents =
         "auto";
 
@@ -1154,9 +1207,9 @@ async function startTyping() {
 
 
 
-/* =====================================
-   TYPE EACH LETTER
-===================================== */
+/* =========================
+   TYPE TEXT
+========================= */
 
 function typeText(
     element,
@@ -1207,7 +1260,9 @@ function typeText(
                             index++;
 
 
-                        } else {
+                        }
+
+                        else {
 
 
                             clearInterval(
@@ -1234,9 +1289,9 @@ function typeText(
 
 
 
-/* =====================================
-   WAIT FUNCTION
-===================================== */
+/* =========================
+   WAIT
+========================= */
 
 function wait(ms) {
 
@@ -1255,9 +1310,9 @@ function wait(ms) {
 
 
 
-/* =====================================
+/* =========================
    PHOTOS
-===================================== */
+========================= */
 
 const photos = [
 
@@ -1271,7 +1326,6 @@ const photos = [
 
 
 let currentPhoto = 0;
-
 
 
 function nextPhoto() {
@@ -1298,7 +1352,6 @@ function nextPhoto() {
         photos[currentPhoto];
 
 }
-
 
 
 function previousPhoto() {
@@ -1330,4 +1383,5 @@ function previousPhoto() {
 </script>
 
 </body>
+
 </html>
