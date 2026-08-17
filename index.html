@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +22,8 @@ body {
     overflow-x: hidden;
 }
 
+/* PAGE */
+
 .page {
     min-height: 100vh;
     display: flex;
@@ -37,10 +38,7 @@ body {
     display: none !important;
 }
 
-
-/* =========================
-   FLOATING HEARTS
-========================= */
+/* FLOATING HEARTS */
 
 .heart {
     position: fixed;
@@ -61,10 +59,7 @@ body {
 
 }
 
-
-/* =========================
-   GENERAL ANIMATION
-========================= */
+/* APPEAR */
 
 @keyframes appear {
 
@@ -80,15 +75,11 @@ body {
 
 }
 
-
-/* =========================
-   PAGE 1 - PASSWORD
-========================= */
+/* PAGE 1 - PASSWORD */
 
 .lock-card {
 
     width: min(420px, 100%);
-
     text-align: center;
 
     padding: 42px 28px;
@@ -99,8 +90,7 @@ body {
 
     border-radius: 30px;
 
-    box-shadow:
-        0 25px 70px rgba(132,74,91,.12);
+    box-shadow: 0 25px 70px rgba(132,74,91,.12);
 
     animation: appear 1.2s ease;
 
@@ -109,7 +99,6 @@ body {
 .big-heart {
 
     font-size: 62px;
-
     color: #d8899e;
 
     animation: heartbeat 1.7s infinite;
@@ -214,10 +203,7 @@ body {
 
 }
 
-
-/* =========================
-   PAGE 2 - ENVELOPE
-========================= */
+/* PAGE 2 - ENVELOPE */
 
 .envelope-wrap {
 
@@ -241,8 +227,7 @@ body {
 
     border-radius: 8px;
 
-    box-shadow:
-        0 20px 50px rgba(120,60,80,.18);
+    box-shadow: 0 20px 50px rgba(120,60,80,.18);
 
     cursor: pointer;
 
@@ -258,8 +243,11 @@ body {
 
     background: #e8aebe;
 
-    clip-path:
-        polygon(0 0, 50% 55%, 100% 0);
+    clip-path: polygon(
+        0 0,
+        50% 55%,
+        100% 0
+    );
 
 }
 
@@ -319,10 +307,7 @@ body {
 
 }
 
-
-/* =========================
-   PAGE 3 - LETTER
-========================= */
+/* PAGE 3 - LETTER */
 
 .letter-page {
 
@@ -336,8 +321,7 @@ body {
 
     border-radius: 28px;
 
-    box-shadow:
-        0 20px 60px rgba(100,50,70,.10);
+    box-shadow: 0 20px 60px rgba(100,50,70,.10);
 
     animation: appear 1s ease;
 
@@ -365,54 +349,11 @@ body {
 
 }
 
-.signature {
-
-    text-align: center;
-
-    margin-top: 35px;
-
-    font-size: 20px;
-
-}
-
-.next-btn {
-
-    display: block;
-
-    margin: 35px auto 0;
-
-    padding: 13px 25px;
-
-    border: none;
-
-    border-radius: 50px;
-
-    background: #d8899e;
-
-    color: white;
-
-    cursor: pointer;
-
-    transition: .3s;
-
-}
-
-.next-btn:hover {
-
-    background: #c8758c;
-
-    transform: translateY(-2px);
-
-}
-
-
-/* =========================
-   TYPING EFFECT
-========================= */
+/* TYPING EFFECT */
 
 .typing-text {
 
-    min-height: 40px;
+    min-height: 45px;
 
 }
 
@@ -442,10 +383,47 @@ body {
 
 }
 
+.signature {
 
-/* =========================
-   PAGE 4 - MEMORIES
-========================= */
+    text-align: center;
+
+    margin-top: 35px;
+
+    font-size: 20px;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+
+}
+
+.signature.show {
+
+    opacity: 1;
+
+}
+
+.next-btn {
+
+    display: block;
+
+    margin: 35px auto 0;
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #d8899e;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+/* PAGE 4 - MEMORIES */
 
 .memory-page {
 
@@ -491,8 +469,7 @@ body {
 
     overflow: hidden;
 
-    box-shadow:
-        0 18px 50px rgba(120,60,80,.12);
+    box-shadow: 0 18px 50px rgba(120,60,80,.12);
 
 }
 
@@ -503,8 +480,6 @@ body {
     height: 100%;
 
     object-fit: cover;
-
-    transition: opacity .4s ease;
 
 }
 
@@ -522,96 +497,7 @@ body {
 
 }
 
-
-/* =========================
-   PAGE 5
-========================= */
-
-.music-card {
-
-    width: min(430px, 100%);
-
-    background: white;
-
-    border-radius: 28px;
-
-    padding: 35px 25px;
-
-    text-align: center;
-
-    box-shadow:
-        0 20px 60px rgba(100,50,70,.12);
-
-}
-
-.music-disc {
-
-    width: 160px;
-
-    height: 160px;
-
-    margin: auto;
-
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #efb9c8,
-            #d8869d
-        );
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: white;
-
-    font-size: 55px;
-
-    box-shadow:
-        0 15px 40px rgba(190,100,125,.25);
-
-    animation: musicSpin 6s linear infinite;
-
-}
-
-@keyframes musicSpin {
-
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-
-}
-
-.music-card h2 {
-
-    margin-top: 25px;
-
-    font-size: 25px;
-
-    font-weight: normal;
-
-}
-
-.music-card p {
-
-    margin-top: 8px;
-
-    color: #967780;
-
-}
-
-
-/* =========================
-   PAGE 6 - FINAL
-========================= */
+/* PAGE 5 - ENDING */
 
 .final {
 
@@ -659,10 +545,7 @@ body {
 
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:500px) {
 
@@ -671,6 +554,12 @@ body {
     .memory-page h1 {
 
         font-size: 29px;
+
+    }
+
+    .letter-page {
+
+        padding: 35px 22px;
 
     }
 
@@ -692,12 +581,6 @@ body {
 
     }
 
-    .final p {
-
-        font-size: 17px;
-
-    }
-
 }
 
 </style>
@@ -708,27 +591,25 @@ body {
 <body>
 
 
-<!-- =================================
-     BACKGROUND MUSIC
-================================= -->
+<!-- ================================= -->
+<!-- BACKGROUND MUSIC                  -->
+<!-- ================================= -->
 
 <audio
     id="backgroundMusic"
     loop
     preload="auto"
 >
-
     <source
         src="Menari-nari.mp3"
         type="audio/mpeg"
     >
-
 </audio>
 
 
-<!-- =================================
-     PAGE 1 - PASSWORD
-================================= -->
+<!-- ================================= -->
+<!-- PAGE 1 : PASSWORD                 -->
+<!-- ================================= -->
 
 <section
     id="page1"
@@ -761,7 +642,7 @@ body {
 
         <button
             class="open-btn"
-            onclick="checkPassword()"
+            id="openButton"
         >
             Open My Letter ♡
         </button>
@@ -782,9 +663,9 @@ body {
 </section>
 
 
-<!-- =================================
-     PAGE 2 - ENVELOPE
-================================= -->
+<!-- ================================= -->
+<!-- PAGE 2 : ENVELOPE                -->
+<!-- ================================= -->
 
 <section
     id="page2"
@@ -815,9 +696,9 @@ body {
 </section>
 
 
-<!-- =================================
-     PAGE 3 - LETTER
-================================= -->
+<!-- ================================= -->
+<!-- PAGE 3 : LETTER                  -->
+<!-- ================================= -->
 
 <section
     id="page3"
@@ -830,44 +711,39 @@ body {
             Dear YAYANG ♡
         </h1>
 
-        <p>
-            Hi yayang,
+
+        <p class="typing-text">
         </p>
 
-        <p
-            class="typing-text"
-            data-text="Kalau awak sampai dekat sini, maksudnya awak dah berjaya buka surat kecil yang IKA buat khas untuk awak. 🤍"
-        ></p>
 
-        <p
-            class="typing-text"
-            data-text="IKA cuma nak awak tahu satu benda — awak sangat bermakna."
-        ></p>
+        <p class="typing-text">
+        </p>
 
-        <p
-            class="typing-text"
-            data-text="Terima kasih untuk setiap senyuman, setiap cerita, setiap masa yang kita pernah kongsi."
-        ></p>
 
-        <p
-            class="typing-text"
-            data-text="Mungkin IKA tak selalu pandai cakap apa yang IKA rasa, tapi kalau ada satu benda yang IKA harap awak ingat..."
-        ></p>
+        <p class="typing-text">
+        </p>
 
-        <p
-            class="typing-text"
-            data-text="awak akan sentiasa ada tempat yang istimewa dalam hati IKA."
-        ></p>
 
-        <div class="signature">
+        <p class="typing-text">
+        </p>
 
+
+        <p class="typing-text">
+        </p>
+
+
+        <p class="typing-text">
+        </p>
+
+
+        <div
+            id="signature"
+            class="signature"
+        >
             With love,<br>
-
-            <b>
-                IKA ♡
-            </b>
-
+            <b>IKA ♡</b>
         </div>
+
 
         <button
             class="next-btn"
@@ -881,9 +757,9 @@ body {
 </section>
 
 
-<!-- =================================
-     PAGE 4 - MEMORIES
-================================= -->
+<!-- ================================= -->
+<!-- PAGE 4 : MEMORIES                -->
+<!-- ================================= -->
 
 <section
     id="page4"
@@ -900,6 +776,7 @@ body {
             Some moments are worth keeping forever.
         </p>
 
+
         <div class="photo-box">
 
             <img
@@ -909,6 +786,7 @@ body {
             >
 
         </div>
+
 
         <div class="photo-buttons">
 
@@ -928,44 +806,10 @@ body {
 
         </div>
 
+
         <button
             class="next-btn"
             onclick="showPage(5)"
-        >
-            Our Song ♫
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =================================
-     PAGE 5
-================================= -->
-
-<section
-    id="page5"
-    class="page hidden"
->
-
-    <div class="music-card">
-
-        <div class="music-disc">
-            ♫
-        </div>
-
-        <h2>
-            Menari-nari
-        </h2>
-
-        <p>
-            Raim Laode
-        </p>
-
-        <button
-            class="next-btn"
-            onclick="showPage(6)"
         >
             One Last Thing ♡
         </button>
@@ -975,12 +819,12 @@ body {
 </section>
 
 
-<!-- =================================
-     PAGE 6 - ENDING
-================================= -->
+<!-- ================================= -->
+<!-- PAGE 5 : ENDING                  -->
+<!-- ================================= -->
 
 <section
-    id="page6"
+    id="page5"
     class="page hidden"
 >
 
@@ -1009,13 +853,8 @@ body {
         </p>
 
         <div class="ika">
-
             With love,<br>
-
-            <b>
-                IKA ♡
-            </b>
-
+            <b>IKA ♡</b>
         </div>
 
     </div>
@@ -1023,96 +862,138 @@ body {
 </section>
 
 
-<!-- =================================
-     JAVASCRIPT
-================================= -->
 
 <script>
 
 
-/* =========================
-   PASSWORD
-========================= */
+/* ================================= */
+/* PASSWORD                          */
+/* ================================= */
 
 const PASSWORD = "0602";
 
 
-function checkPassword() {
-
-    const input =
-        document.getElementById("password").value;
-
-    const error =
-        document.getElementById("error");
-
-    const music =
-        document.getElementById("backgroundMusic");
+const openButton =
+    document.getElementById("openButton");
 
 
-    if (input === PASSWORD) {
+openButton.addEventListener(
+    "click",
+    function () {
 
-        error.innerHTML = "";
+        const input =
+            document.getElementById("password").value;
+
+        const error =
+            document.getElementById("error");
 
 
-        /*
-        Start music AFTER
-        the user presses the button.
-        */
+        if (input === PASSWORD) {
 
-        music.currentTime = 0;
+            error.innerHTML = "";
 
-        music.play()
-            .then(function() {
 
-                console.log("Music started.");
+            /*
+             * IMPORTANT:
+             *
+             * Lagu dimainkan SEBAIK sahaja
+             * user tekan button.
+             *
+             * Ini membantu browser telefon
+             * benarkan audio.
+             */
 
-            })
-            .catch(function(err) {
-
-                console.log(
-                    "Music blocked by browser:",
-                    err
+            const music =
+                document.getElementById(
+                    "backgroundMusic"
                 );
 
-            });
+
+            music.volume = 1;
 
 
-        showPage(2);
+            const playPromise =
+                music.play();
 
-        startHearts();
+
+            if (playPromise !== undefined) {
+
+                playPromise.catch(function () {
+
+                    console.log(
+                        "Browser blocked audio autoplay."
+                    );
+
+                });
+
+            }
 
 
-    } else {
+            showPage(2);
 
-        error.innerHTML =
-            "Hmm... password salah 🥺";
+            startHearts();
+
+        }
+
+        else {
+
+            error.innerHTML =
+                "Hmm... password salah 🥺";
+
+        }
 
     }
+);
 
-}
 
 
-/* =========================
-   PAGE SWITCHING
-========================= */
+/* ================================= */
+/* ENTER PASSWORD                    */
+/* ================================= */
+
+document
+    .getElementById("password")
+    .addEventListener(
+        "keydown",
+        function(e) {
+
+            if (e.key === "Enter") {
+
+                openButton.click();
+
+            }
+
+        }
+    );
+
+
+
+/* ================================= */
+/* PAGE NAVIGATION                   */
+/* ================================= */
 
 function showPage(number) {
 
+
     for (
         let i = 1;
-        i <= 6;
+        i <= 5;
         i++
     ) {
 
         document
-            .getElementById("page" + i)
+            .getElementById(
+                "page" + i
+            )
             .classList.add("hidden");
 
     }
 
 
     document
-        .getElementById("page" + number)
+        .getElementById(
+            "page" + number
+        )
         .classList.remove("hidden");
 
 
@@ -1123,9 +1004,9 @@ function showPage(number) {
 
 
     /*
-    Start typing when
-    Page 3 opens.
-    */
+     * Bila masuk Page 3,
+     * mula typing effect.
+     */
 
     if (number === 3) {
 
@@ -1136,38 +1017,170 @@ function showPage(number) {
 }
 
 
-/* =========================
-   ENTER PASSWORD
-========================= */
 
-document
-    .getElementById("password")
-    .addEventListener(
-        "keydown",
-        function(e) {
+/* ================================= */
+/* TYPING EFFECT                     */
+/* ================================= */
 
-            if (e.key === "Enter") {
+const letterTexts = [
 
-                checkPassword();
+    "Hi yayang,",
+
+    "Kalau awak sampai dekat sini, maksudnya awak dah berjaya buka surat kecil yang IKA buat khas untuk awak. 🤍",
+
+    "IKA cuma nak awak tahu satu benda — awak sangat bermakna.",
+
+    "Terima kasih untuk setiap senyuman, setiap cerita, setiap masa yang kita pernah kongsi.",
+
+    "Mungkin IKA tak selalu pandai cakap apa yang IKA rasa, tapi kalau ada satu benda yang IKA harap awak ingat...",
+
+    "awak akan sentiasa ada tempat yang istimewa dalam hati IKA."
+
+];
+
+
+let typingStarted = false;
+
+
+function startTyping() {
+
+
+    if (typingStarted) {
+        return;
+    }
+
+
+    typingStarted = true;
+
+
+    const paragraphs =
+        document.querySelectorAll(
+            ".typing-text"
+        );
+
+
+    let paragraphIndex = 0;
+
+
+    function typeParagraph() {
+
+
+        if (
+            paragraphIndex >=
+            paragraphs.length
+        ) {
+
+            document
+                .getElementById(
+                    "signature"
+                )
+                .classList.add("show");
+
+            return;
+
+        }
+
+
+        const paragraph =
+            paragraphs[
+                paragraphIndex
+            ];
+
+
+        const text =
+            letterTexts[
+                paragraphIndex
+            ];
+
+
+        paragraph.innerHTML =
+            '<span class="typed"></span>' +
+            '<span class="typing-cursor"></span>';
+
+
+        const typed =
+            paragraph.querySelector(
+                ".typed"
+            );
+
+
+        let characterIndex = 0;
+
+
+        function typeCharacter() {
+
+
+            if (
+                characterIndex <
+                text.length
+            ) {
+
+                typed.textContent +=
+                    text.charAt(
+                        characterIndex
+                    );
+
+
+                characterIndex++;
+
+
+                setTimeout(
+                    typeCharacter,
+                    35
+                );
+
+            }
+
+            else {
+
+                const cursor =
+                    paragraph.querySelector(
+                        ".typing-cursor"
+                    );
+
+                if (cursor) {
+                    cursor.remove();
+                }
+
+
+                paragraphIndex++;
+
+
+                setTimeout(
+                    typeParagraph,
+                    500
+                );
 
             }
 
         }
-    );
 
 
-/* =========================
-   FLOATING HEARTS
-========================= */
+        typeCharacter();
+
+    }
+
+
+    typeParagraph();
+
+}
+
+
+
+/* ================================= */
+/* FLOATING HEARTS                   */
+/* ================================= */
 
 let heartsStarted = false;
 
 
 function startHearts() {
 
+
     if (heartsStarted) {
         return;
     }
+
 
     heartsStarted = true;
 
@@ -1175,44 +1188,56 @@ function startHearts() {
     setInterval(
         function() {
 
+
             const heart =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
 
             heart.className =
                 "heart";
 
 
-            const symbols =
-                [
-                    "♡",
-                    "♥",
-                    "❤",
-                    "✦"
-                ];
+            const symbols = [
+                "♡",
+                "♥",
+                "❤",
+                "✦"
+            ];
 
 
             heart.innerHTML =
                 symbols[
                     Math.floor(
-                        Math.random()
-                        * symbols.length
+                        Math.random() *
+                        symbols.length
                     )
                 ];
 
 
             heart.style.left =
-                Math.random() * 100 + "vw";
+                Math.random() *
+                100 +
+                "vw";
 
 
             heart.style.fontSize =
-                (14 + Math.random() * 18)
-                + "px";
+                (
+                    14 +
+                    Math.random() *
+                    18
+                ) +
+                "px";
 
 
             heart.style.animationDuration =
-                (5 + Math.random() * 5)
-                + "s";
+                (
+                    5 +
+                    Math.random() *
+                    5
+                ) +
+                "s";
 
 
             document.body.appendChild(
@@ -1237,126 +1262,10 @@ function startHearts() {
 }
 
 
-/* =========================
-   TYPING EFFECT
-========================= */
 
-let typingStarted = false;
-
-
-function startTyping() {
-
-    if (typingStarted) {
-        return;
-    }
-
-    typingStarted = true;
-
-
-    const texts =
-        document.querySelectorAll(
-            ".typing-text"
-        );
-
-
-    let index = 0;
-
-
-    function typeParagraph() {
-
-        if (index >= texts.length) {
-            return;
-        }
-
-
-        const element =
-            texts[index];
-
-
-        const text =
-            element.getAttribute(
-                "data-text"
-            );
-
-
-        element.innerHTML =
-            '<span class="typing-cursor"></span>';
-
-
-        let charIndex = 0;
-
-
-        const typing =
-            setInterval(
-                function() {
-
-                    if (
-                        charIndex
-                        < text.length
-                    ) {
-
-                        const cursor =
-                            element.querySelector(
-                                ".typing-cursor"
-                            );
-
-
-                        cursor.insertAdjacentText(
-                            "beforebegin",
-                            text.charAt(
-                                charIndex
-                            )
-                        );
-
-
-                        charIndex++;
-
-
-                    } else {
-
-                        clearInterval(
-                            typing
-                        );
-
-
-                        const cursor =
-                            element.querySelector(
-                                ".typing-cursor"
-                            );
-
-
-                        if (cursor) {
-
-                            cursor.remove();
-
-                        }
-
-
-                        index++;
-
-
-                        setTimeout(
-                            typeParagraph,
-                            500
-                        );
-
-                    }
-
-                },
-                35
-            );
-
-    }
-
-
-    typeParagraph();
-
-}
-
-
-/* =========================
-   PHOTOS
-========================= */
+/* ================================= */
+/* PHOTOS                            */
+/* ================================= */
 
 const photos = [
 
@@ -1372,7 +1281,9 @@ const photos = [
 let currentPhoto = 0;
 
 
+
 function nextPhoto() {
+
 
     currentPhoto++;
 
@@ -1387,36 +1298,28 @@ function nextPhoto() {
     }
 
 
-    const image =
-        document.getElementById(
+    document
+        .getElementById(
             "memoryPhoto"
-        );
-
-
-    image.style.opacity = "0";
-
-
-    setTimeout(
-        function() {
-
-            image.src =
-                photos[currentPhoto];
-
-            image.style.opacity = "1";
-
-        },
-        200
-    );
+        )
+        .src =
+        photos[
+            currentPhoto
+        ];
 
 }
 
 
+
 function previousPhoto() {
+
 
     currentPhoto--;
 
 
-    if (currentPhoto < 0) {
+    if (
+        currentPhoto < 0
+    ) {
 
         currentPhoto =
             photos.length - 1;
@@ -1424,32 +1327,20 @@ function previousPhoto() {
     }
 
 
-    const image =
-        document.getElementById(
+    document
+        .getElementById(
             "memoryPhoto"
-        );
-
-
-    image.style.opacity = "0";
-
-
-    setTimeout(
-        function() {
-
-            image.src =
-                photos[currentPhoto];
-
-            image.style.opacity = "1";
-
-        },
-        200
-    );
+        )
+        .src =
+        photos[
+            currentPhoto
+        ];
 
 }
 
 
 </script>
 
-</body>
 
+</body>
 </html>
