@@ -584,11 +584,17 @@ function checkPassword() {
 
     if (input === PASSWORD) {
 
-        error.innerHTML = "";
+    error.innerHTML = "";
 
-        showPage(2);
+    const music = document.getElementById("backgroundMusic");
 
-        startHearts();
+    music.play();
+
+    showPage(2);
+
+    startHearts();
+
+}
 
     } else {
 
