@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -64,7 +63,7 @@ body {
 
 
 /* =========================
-   APPEAR
+   GENERAL ANIMATION
 ========================= */
 
 @keyframes appear {
@@ -83,7 +82,7 @@ body {
 
 
 /* =========================
-   PAGE 1
+   PAGE 1 - PASSWORD
 ========================= */
 
 .lock-card {
@@ -100,9 +99,11 @@ body {
 
     border-radius: 30px;
 
-    box-shadow: 0 25px 70px rgba(132,74,91,.12);
+    box-shadow:
+        0 25px 70px rgba(132,74,91,.12);
 
     animation: appear 1.2s ease;
+
 }
 
 .big-heart {
@@ -112,6 +113,7 @@ body {
     color: #d8899e;
 
     animation: heartbeat 1.7s infinite;
+
 }
 
 @keyframes heartbeat {
@@ -131,6 +133,7 @@ body {
     font-weight: normal;
 
     letter-spacing: 1px;
+
 }
 
 .lock-card p {
@@ -140,6 +143,7 @@ body {
     line-height: 1.8;
 
     color: #92747d;
+
 }
 
 .password {
@@ -165,6 +169,7 @@ body {
     color: #60444d;
 
     background: #fffafb;
+
 }
 
 .open-btn {
@@ -186,6 +191,7 @@ body {
     cursor: pointer;
 
     transition: .3s;
+
 }
 
 .open-btn:hover {
@@ -193,6 +199,7 @@ body {
     transform: translateY(-2px);
 
     background: #c8758c;
+
 }
 
 .error {
@@ -204,11 +211,12 @@ body {
     color: #bd526e;
 
     font-size: 13px;
+
 }
 
 
 /* =========================
-   PAGE 2
+   PAGE 2 - ENVELOPE
 ========================= */
 
 .envelope-wrap {
@@ -216,6 +224,7 @@ body {
     text-align: center;
 
     animation: appear 1s ease;
+
 }
 
 .envelope {
@@ -232,9 +241,11 @@ body {
 
     border-radius: 8px;
 
-    box-shadow: 0 20px 50px rgba(120,60,80,.18);
+    box-shadow:
+        0 20px 50px rgba(120,60,80,.18);
 
     cursor: pointer;
+
 }
 
 .envelope:before {
@@ -247,11 +258,9 @@ body {
 
     background: #e8aebe;
 
-    clip-path: polygon(
-        0 0,
-        50% 55%,
-        100% 0
-    );
+    clip-path:
+        polygon(0 0, 50% 55%, 100% 0);
+
 }
 
 .envelope:after {
@@ -269,6 +278,7 @@ body {
     font-size: 45px;
 
     color: white;
+
 }
 
 .envelope-wrap h2 {
@@ -278,6 +288,7 @@ body {
     font-size: 30px;
 
     font-weight: normal;
+
 }
 
 .envelope-wrap p {
@@ -285,6 +296,7 @@ body {
     margin-top: 10px;
 
     color: #987780;
+
 }
 
 .tap {
@@ -296,6 +308,7 @@ body {
     font-size: 14px;
 
     animation: blink 1.5s infinite;
+
 }
 
 @keyframes blink {
@@ -308,7 +321,7 @@ body {
 
 
 /* =========================
-   PAGE 3
+   PAGE 3 - LETTER
 ========================= */
 
 .letter-page {
@@ -323,9 +336,11 @@ body {
 
     border-radius: 28px;
 
-    box-shadow: 0 20px 60px rgba(100,50,70,.10);
+    box-shadow:
+        0 20px 60px rgba(100,50,70,.10);
 
     animation: appear 1s ease;
+
 }
 
 .letter-page h1 {
@@ -337,42 +352,16 @@ body {
     font-weight: normal;
 
     margin-bottom: 30px;
+
 }
 
-.typing-area {
+.letter-page p {
 
     font-size: 18px;
 
     line-height: 2;
 
-    min-height: 400px;
-}
-
-.typing-text {
-
     margin-bottom: 20px;
-}
-
-.cursor {
-
-    display: inline-block;
-
-    width: 2px;
-
-    height: 20px;
-
-    background: #d8899e;
-
-    margin-left: 3px;
-
-    animation: cursorBlink .8s infinite;
-}
-
-@keyframes cursorBlink {
-
-    50% {
-        opacity: 0;
-    }
 
 }
 
@@ -384,14 +373,6 @@ body {
 
     font-size: 20px;
 
-    opacity: 0;
-
-    transition: opacity 1s ease;
-}
-
-.signature.show {
-
-    opacity: 1;
 }
 
 .next-btn {
@@ -411,11 +392,59 @@ body {
     color: white;
 
     cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.next-btn:hover {
+
+    background: #c8758c;
+
+    transform: translateY(-2px);
+
 }
 
 
 /* =========================
-   PAGE 4
+   TYPING EFFECT
+========================= */
+
+.typing-text {
+
+    min-height: 40px;
+
+}
+
+.typing-cursor {
+
+    display: inline-block;
+
+    width: 2px;
+
+    height: 20px;
+
+    background: #d8899e;
+
+    margin-left: 3px;
+
+    animation: cursorBlink .7s infinite;
+
+    vertical-align: middle;
+
+}
+
+@keyframes cursorBlink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   PAGE 4 - MEMORIES
 ========================= */
 
 .memory-page {
@@ -423,6 +452,7 @@ body {
     width: min(650px, 100%);
 
     text-align: center;
+
 }
 
 .memory-page h1 {
@@ -430,6 +460,7 @@ body {
     font-size: 34px;
 
     font-weight: normal;
+
 }
 
 .subtitle {
@@ -437,6 +468,7 @@ body {
     margin-top: 10px;
 
     color: #967780;
+
 }
 
 .photo-box {
@@ -459,7 +491,9 @@ body {
 
     overflow: hidden;
 
-    box-shadow: 0 18px 50px rgba(120,60,80,.12);
+    box-shadow:
+        0 18px 50px rgba(120,60,80,.12);
+
 }
 
 .photo-box img {
@@ -469,11 +503,114 @@ body {
     height: 100%;
 
     object-fit: cover;
+
+    transition: opacity .4s ease;
+
+}
+
+.photo-buttons {
+
+    margin-top: 15px;
+
+}
+
+.photo-buttons button {
+
+    display: inline-block;
+
+    margin: 5px;
+
 }
 
 
 /* =========================
-   PAGE 5 / ENDING
+   PAGE 5
+========================= */
+
+.music-card {
+
+    width: min(430px, 100%);
+
+    background: white;
+
+    border-radius: 28px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(100,50,70,.12);
+
+}
+
+.music-disc {
+
+    width: 160px;
+
+    height: 160px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #efb9c8,
+            #d8869d
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 55px;
+
+    box-shadow:
+        0 15px 40px rgba(190,100,125,.25);
+
+    animation: musicSpin 6s linear infinite;
+
+}
+
+@keyframes musicSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.music-card h2 {
+
+    margin-top: 25px;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+}
+
+.music-card p {
+
+    margin-top: 8px;
+
+    color: #967780;
+
+}
+
+
+/* =========================
+   PAGE 6 - FINAL
 ========================= */
 
 .final {
@@ -483,6 +620,7 @@ body {
     max-width: 600px;
 
     animation: appear 1.5s ease;
+
 }
 
 .final .huge {
@@ -490,6 +628,7 @@ body {
     font-size: 70px;
 
     color: #d8899e;
+
 }
 
 .final h1 {
@@ -499,6 +638,7 @@ body {
     font-weight: normal;
 
     margin-top: 20px;
+
 }
 
 .final p {
@@ -508,6 +648,7 @@ body {
     line-height: 2;
 
     margin-top: 25px;
+
 }
 
 .final .ika {
@@ -515,6 +656,7 @@ body {
     margin-top: 40px;
 
     font-size: 25px;
+
 }
 
 
@@ -529,16 +671,31 @@ body {
     .memory-page h1 {
 
         font-size: 29px;
+
     }
 
-    .typing-area {
+    .letter-page p {
 
         font-size: 16px;
+
     }
 
     .photo-box {
 
         height: 300px;
+
+    }
+
+    .final h1 {
+
+        font-size: 30px;
+
+    }
+
+    .final p {
+
+        font-size: 17px;
+
     }
 
 }
@@ -551,9 +708,9 @@ body {
 <body>
 
 
-<!-- =========================
-     MUSIC
-========================= -->
+<!-- =================================
+     BACKGROUND MUSIC
+================================= -->
 
 <audio
     id="backgroundMusic"
@@ -569,10 +726,9 @@ body {
 </audio>
 
 
-
-<!-- =========================
-     PAGE 1
-========================= -->
+<!-- =================================
+     PAGE 1 - PASSWORD
+================================= -->
 
 <section
     id="page1"
@@ -581,22 +737,18 @@ body {
 
     <div class="lock-card">
 
-
         <div class="big-heart">
             ♡
         </div>
-
 
         <h1>
             For YAYANG
         </h1>
 
-
         <p>
             A little something<br>
             made especially for you.
         </p>
-
 
         <input
             id="password"
@@ -607,7 +759,6 @@ body {
             inputmode="numeric"
         >
 
-
         <button
             class="open-btn"
             onclick="checkPassword()"
@@ -615,27 +766,25 @@ body {
             Open My Letter ♡
         </button>
 
-
         <div
             id="error"
             class="error"
         ></div>
 
-
-        <p style="font-size:12px; opacity:.55;">
+        <p
+            style="font-size:12px; opacity:.55;"
+        >
             made with love by IKA
         </p>
-
 
     </div>
 
 </section>
 
 
-
-<!-- =========================
-     PAGE 2
-========================= -->
+<!-- =================================
+     PAGE 2 - ENVELOPE
+================================= -->
 
 <section
     id="page2"
@@ -644,37 +793,31 @@ body {
 
     <div class="envelope-wrap">
 
-
         <div
             class="envelope"
             onclick="showPage(3)"
         ></div>
 
-
         <h2>
             For YAYANG ♡
         </h2>
-
 
         <p>
             Someone left a little something here for you...
         </p>
 
-
         <div class="tap">
             tap the envelope to open
         </div>
-
 
     </div>
 
 </section>
 
 
-
-<!-- =========================
-     PAGE 3
-========================= -->
+<!-- =================================
+     PAGE 3 - LETTER
+================================= -->
 
 <section
     id="page3"
@@ -683,22 +826,40 @@ body {
 
     <div class="letter-page">
 
-
         <h1>
             Dear YAYANG ♡
         </h1>
 
+        <p>
+            Hi yayang,
+        </p>
 
-        <div
-            id="typingArea"
-            class="typing-area"
-        ></div>
+        <p
+            class="typing-text"
+            data-text="Kalau awak sampai dekat sini, maksudnya awak dah berjaya buka surat kecil yang IKA buat khas untuk awak. 🤍"
+        ></p>
 
+        <p
+            class="typing-text"
+            data-text="IKA cuma nak awak tahu satu benda — awak sangat bermakna."
+        ></p>
 
-        <div
-            id="signature"
-            class="signature"
-        >
+        <p
+            class="typing-text"
+            data-text="Terima kasih untuk setiap senyuman, setiap cerita, setiap masa yang kita pernah kongsi."
+        ></p>
+
+        <p
+            class="typing-text"
+            data-text="Mungkin IKA tak selalu pandai cakap apa yang IKA rasa, tapi kalau ada satu benda yang IKA harap awak ingat..."
+        ></p>
+
+        <p
+            class="typing-text"
+            data-text="awak akan sentiasa ada tempat yang istimewa dalam hati IKA."
+        ></p>
+
+        <div class="signature">
 
             With love,<br>
 
@@ -708,26 +869,21 @@ body {
 
         </div>
 
-
         <button
-            id="letterNext"
             class="next-btn"
             onclick="showPage(4)"
-            style="opacity:0; pointer-events:none;"
         >
             Our Memories →
         </button>
-
 
     </div>
 
 </section>
 
 
-
-<!-- =========================
-     PAGE 4
-========================= -->
+<!-- =================================
+     PAGE 4 - MEMORIES
+================================= -->
 
 <section
     id="page4"
@@ -736,19 +892,15 @@ body {
 
     <div class="memory-page">
 
-
         <h1>
             Our Little Memories ♡
         </h1>
-
 
         <p class="subtitle">
             Some moments are worth keeping forever.
         </p>
 
-
         <div class="photo-box">
-
 
             <img
                 id="memoryPhoto"
@@ -756,86 +908,105 @@ body {
                 alt="Our memory"
             >
 
-
         </div>
 
-
-        <div style="margin-top:15px;">
-
+        <div class="photo-buttons">
 
             <button
                 class="next-btn"
                 onclick="previousPhoto()"
-                style="display:inline-block; margin:5px;"
             >
                 ←
             </button>
 
-
             <button
                 class="next-btn"
                 onclick="nextPhoto()"
-                style="display:inline-block; margin:5px;"
             >
                 →
             </button>
 
-
         </div>
-
 
         <button
             class="next-btn"
             onclick="showPage(5)"
         >
-            One Last Thing ♡
+            Our Song ♫
         </button>
-
 
     </div>
 
 </section>
 
 
-
-<!-- =========================
+<!-- =================================
      PAGE 5
-========================= -->
+================================= -->
 
 <section
     id="page5"
     class="page hidden"
 >
 
-    <div class="final">
+    <div class="music-card">
 
+        <div class="music-disc">
+            ♫
+        </div>
+
+        <h2>
+            Menari-nari
+        </h2>
+
+        <p>
+            Raim Laode
+        </p>
+
+        <button
+            class="next-btn"
+            onclick="showPage(6)"
+        >
+            One Last Thing ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     PAGE 6 - ENDING
+================================= -->
+
+<section
+    id="page6"
+    class="page hidden"
+>
+
+    <div class="final">
 
         <div class="huge">
             ♡
         </div>
 
-
         <h1>
             And one last thing...
         </h1>
-
 
         <p>
             If you ever wonder how special you are to me,
             I hope you remember this little letter.
         </p>
 
-
         <p>
             Maybe this is just a small website,
             but every word here was made with a sincere heart.
         </p>
 
-
         <p>
             Thank you for being you.
         </p>
-
 
         <div class="ika">
 
@@ -847,12 +1018,14 @@ body {
 
         </div>
 
-
     </div>
 
 </section>
 
 
+<!-- =================================
+     JAVASCRIPT
+================================= -->
 
 <script>
 
@@ -866,72 +1039,50 @@ const PASSWORD = "0602";
 
 function checkPassword() {
 
-
     const input =
         document.getElementById("password").value;
-
 
     const error =
         document.getElementById("error");
 
+    const music =
+        document.getElementById("backgroundMusic");
+
 
     if (input === PASSWORD) {
-
 
         error.innerHTML = "";
 
 
         /*
-        START MUSIC
-
-        Lagu akan cuba dimainkan
-        SELEPAS user tekan button.
-        Ini lebih mudah dibenarkan
-        oleh browser phone.
+        Start music AFTER
+        the user presses the button.
         */
-
-        const music =
-            document.getElementById(
-                "backgroundMusic"
-            );
-
-
-        music.volume = 1;
-
 
         music.currentTime = 0;
 
+        music.play()
+            .then(function() {
 
-        const playPromise =
-            music.play();
+                console.log("Music started.");
 
+            })
+            .catch(function(err) {
 
-        if (playPromise !== undefined) {
+                console.log(
+                    "Music blocked by browser:",
+                    err
+                );
 
-            playPromise.catch(
-                function(err) {
-
-                    console.log(
-                        "Music autoplay blocked:",
-                        err
-                    );
-
-                }
-            );
-
-        }
+            });
 
 
         showPage(2);
 
-
         startHearts();
 
 
-    }
-
-    else {
-
+    } else {
 
         error.innerHTML =
             "Hmm... password salah 🥺";
@@ -941,41 +1092,40 @@ function checkPassword() {
 }
 
 
-
 /* =========================
-   PAGE NAVIGATION
+   PAGE SWITCHING
 ========================= */
 
 function showPage(number) {
 
-
     for (
         let i = 1;
-        i <= 5;
+        i <= 6;
         i++
     ) {
 
-
         document
-            .getElementById(
-                "page" + i
-            )
-            .classList
-            .add("hidden");
+            .getElementById("page" + i)
+            .classList.add("hidden");
 
     }
 
 
     document
-        .getElementById(
-            "page" + number
-        )
-        .classList
-        .remove("hidden");
+        .getElementById("page" + number)
+        .classList.remove("hidden");
 
 
-    window.scrollTo(0, 0);
+    window.scrollTo(
+        0,
+        0
+    );
 
+
+    /*
+    Start typing when
+    Page 3 opens.
+    */
 
     if (number === 3) {
 
@@ -984,7 +1134,6 @@ function showPage(number) {
     }
 
 }
-
 
 
 /* =========================
@@ -997,21 +1146,18 @@ document
         "keydown",
         function(e) {
 
-
             if (e.key === "Enter") {
 
                 checkPassword();
 
             }
 
-
         }
     );
 
 
-
 /* =========================
-   HEARTS
+   FLOATING HEARTS
 ========================= */
 
 let heartsStarted = false;
@@ -1019,13 +1165,9 @@ let heartsStarted = false;
 
 function startHearts() {
 
-
     if (heartsStarted) {
-
         return;
-
     }
-
 
     heartsStarted = true;
 
@@ -1033,11 +1175,8 @@ function startHearts() {
     setInterval(
         function() {
 
-
             const heart =
-                document.createElement(
-                    "div"
-                );
+                document.createElement("div");
 
 
             heart.className =
@@ -1045,14 +1184,19 @@ function startHearts() {
 
 
             const symbols =
-                ["♡", "♥", "❤", "✦"];
+                [
+                    "♡",
+                    "♥",
+                    "❤",
+                    "✦"
+                ];
 
 
             heart.innerHTML =
                 symbols[
                     Math.floor(
-                        Math.random() *
-                        symbols.length
+                        Math.random()
+                        * symbols.length
                     )
                 ];
 
@@ -1062,17 +1206,13 @@ function startHearts() {
 
 
             heart.style.fontSize =
-                (
-                    14 +
-                    Math.random() * 18
-                ) + "px";
+                (14 + Math.random() * 18)
+                + "px";
 
 
             heart.style.animationDuration =
-                (
-                    5 +
-                    Math.random() * 5
-                ) + "s";
+                (5 + Math.random() * 5)
+                + "s";
 
 
             document.body.appendChild(
@@ -1097,217 +1237,121 @@ function startHearts() {
 }
 
 
-
 /* =========================
    TYPING EFFECT
 ========================= */
 
-const letterMessages = [
-
-    "Hi yayang,",
-
-    "Kalau awak sampai dekat sini, maksudnya awak dah berjaya buka surat kecil yang IKA buat khas untuk awak. 🤍",
-
-    "IKA cuma nak awak tahu satu benda — awak sangat bermakna.",
-
-    "Terima kasih untuk setiap senyuman, setiap cerita, setiap masa yang kita pernah kongsi.",
-
-    "Mungkin IKA tak selalu pandai cakap apa yang IKA rasa, tapi kalau ada satu benda yang IKA harap awak ingat...",
-
-    "awak akan sentiasa ada tempat yang istimewa dalam hati IKA."
-
-];
-
-
 let typingStarted = false;
 
 
-async function startTyping() {
-
+function startTyping() {
 
     if (typingStarted) {
-
         return;
-
     }
-
 
     typingStarted = true;
 
 
-    const area =
-        document.getElementById(
-            "typingArea"
+    const texts =
+        document.querySelectorAll(
+            ".typing-text"
         );
 
 
-    const signature =
-        document.getElementById(
-            "signature"
-        );
+    let index = 0;
 
 
-    const nextButton =
-        document.getElementById(
-            "letterNext"
-        );
+    function typeParagraph() {
+
+        if (index >= texts.length) {
+            return;
+        }
 
 
-    area.innerHTML = "";
+        const element =
+            texts[index];
 
 
-    for (
-        let i = 0;
-        i < letterMessages.length;
-        i++
-    ) {
-
-
-        const paragraph =
-            document.createElement(
-                "div"
+        const text =
+            element.getAttribute(
+                "data-text"
             );
 
 
-        paragraph.className =
-            "typing-text";
+        element.innerHTML =
+            '<span class="typing-cursor"></span>';
 
 
-        area.appendChild(
-            paragraph
-        );
+        let charIndex = 0;
 
 
-        await typeText(
-            paragraph,
-            letterMessages[i]
-        );
+        const typing =
+            setInterval(
+                function() {
+
+                    if (
+                        charIndex
+                        < text.length
+                    ) {
+
+                        const cursor =
+                            element.querySelector(
+                                ".typing-cursor"
+                            );
 
 
-        await wait(500);
+                        cursor.insertAdjacentText(
+                            "beforebegin",
+                            text.charAt(
+                                charIndex
+                            )
+                        );
+
+
+                        charIndex++;
+
+
+                    } else {
+
+                        clearInterval(
+                            typing
+                        );
+
+
+                        const cursor =
+                            element.querySelector(
+                                ".typing-cursor"
+                            );
+
+
+                        if (cursor) {
+
+                            cursor.remove();
+
+                        }
+
+
+                        index++;
+
+
+                        setTimeout(
+                            typeParagraph,
+                            500
+                        );
+
+                    }
+
+                },
+                35
+            );
 
     }
 
 
-    signature.classList.add(
-        "show"
-    );
-
-
-    await wait(700);
-
-
-    nextButton.style.opacity = "1";
-
-
-    nextButton.style.pointerEvents =
-        "auto";
+    typeParagraph();
 
 }
-
-
-
-/* =========================
-   TYPE TEXT
-========================= */
-
-function typeText(
-    element,
-    text
-) {
-
-
-    return new Promise(
-        function(resolve) {
-
-
-            let index = 0;
-
-
-            const cursor =
-                document.createElement(
-                    "span"
-                );
-
-
-            cursor.className =
-                "cursor";
-
-
-            element.appendChild(
-                cursor
-            );
-
-
-            const typing =
-                setInterval(
-                    function() {
-
-
-                        if (
-                            index <
-                            text.length
-                        ) {
-
-
-                            cursor.before(
-                                document.createTextNode(
-                                    text.charAt(index)
-                                )
-                            );
-
-
-                            index++;
-
-
-                        }
-
-                        else {
-
-
-                            clearInterval(
-                                typing
-                            );
-
-
-                            cursor.remove();
-
-
-                            resolve();
-
-                        }
-
-
-                    },
-                    35
-                );
-
-        }
-    );
-
-}
-
-
-
-/* =========================
-   WAIT
-========================= */
-
-function wait(ms) {
-
-    return new Promise(
-        function(resolve) {
-
-            setTimeout(
-                resolve,
-                ms
-            );
-
-        }
-    );
-
-}
-
 
 
 /* =========================
@@ -1330,7 +1374,6 @@ let currentPhoto = 0;
 
 function nextPhoto() {
 
-
     currentPhoto++;
 
 
@@ -1344,25 +1387,36 @@ function nextPhoto() {
     }
 
 
-    document
-        .getElementById(
+    const image =
+        document.getElementById(
             "memoryPhoto"
-        )
-        .src =
-        photos[currentPhoto];
+        );
+
+
+    image.style.opacity = "0";
+
+
+    setTimeout(
+        function() {
+
+            image.src =
+                photos[currentPhoto];
+
+            image.style.opacity = "1";
+
+        },
+        200
+    );
 
 }
 
 
 function previousPhoto() {
 
-
     currentPhoto--;
 
 
-    if (
-        currentPhoto < 0
-    ) {
+    if (currentPhoto < 0) {
 
         currentPhoto =
             photos.length - 1;
@@ -1370,12 +1424,26 @@ function previousPhoto() {
     }
 
 
-    document
-        .getElementById(
+    const image =
+        document.getElementById(
             "memoryPhoto"
-        )
-        .src =
-        photos[currentPhoto];
+        );
+
+
+    image.style.opacity = "0";
+
+
+    setTimeout(
+        function() {
+
+            image.src =
+                photos[currentPhoto];
+
+            image.style.opacity = "1";
+
+        },
+        200
+    );
 
 }
 
